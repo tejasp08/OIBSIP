@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+    <form method="POST" action="/register">
+        <h1>Register</h1>
+        <input type="text" id="username" name="username" placeholder="username" required>
+        <input type="password" id="password" name="password" placeholder="password" required>
+        <button type="submit">REGISTER</button>
+        <p>Already have an account? <a href="/login">Sign in here</a></p>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-container">
+                    {% for category, message in messages %}
+                        <div class="flash {{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+    </form>
+    </div>
+</body>
+</html>

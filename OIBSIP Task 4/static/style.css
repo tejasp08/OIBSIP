@@ -1,0 +1,100 @@
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #80c683; /* Light green background */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Form container */
+form {
+    background: #ffffff; /* White card background */
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+
+a {
+    color: #4CAF50; /* Green link */
+    text-decoration: none;
+    font-size: 18px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+p {
+    font-size: 14px;
+    color: #555;
+    margin-top: 15px;
+}
+
+/*Falsh msg*/
+.flash-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.flash {
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.flash.success {
+    color: green;
+    border-color: green;
+    background-color: #d4f8d4;
+}
+
+.flash.error {
+    color: red;
+    border-color: red;
+    background-color: #f8d4d4;
+}

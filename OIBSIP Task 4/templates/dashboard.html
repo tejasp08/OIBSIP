@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .logout-btn {
+            padding: 10px 20px;
+            color: white;
+            background-color: #d9534f;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .logout-btn:hover {
+            background-color: #c9302c;
+        }
+    </style>
+</head>
+<body>
+    {% if login_success %}
+        <div class="alert alert-success">Login successful!</div>
+    {% endif %}
+    <h1>Welcome to the Dashboard</h1>
+    <p>Hello, {{ session['username'] }}!</p>
+    <a href="/logout" class="logout-btn">Logout</a>
+</body>
+</html>
+
